@@ -163,5 +163,3 @@ This project is a solution for **Lab 1** tasks, which involves implementing a cl
 2. **Task 3 UML Class Diagram**:
    - Adds graphical objects and their interaction with the server.
 
-Include these diagrams in your submission as a separate document or image.
-
