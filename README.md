@@ -147,19 +147,3 @@ This project is a solution for **Lab 1** tasks, which involves implementing a cl
   - Gray circle, red triangle, black square.
 
 ---
-
-## Submission Instructions
-1. Ensure all files (`Task1_server.py`, `Task1_client.py`, `Task2_server.py`, `Task2_client.py`, `Task3_server.py`, `Task3_client.py`, `House.json`) are included.
-2. Include this `README.md` file.
-3. Test all tasks to ensure correctness.
-4. Zip the project and upload it to Canvas.
-
----
-
-## UML Diagrams
-1. **Task 2 UML Class Diagram**:
-   - Represents the server, client, and JSON handling.
-
-2. **Task 3 UML Class Diagram**:
-   - Adds graphical objects and their interaction with the server.
-
