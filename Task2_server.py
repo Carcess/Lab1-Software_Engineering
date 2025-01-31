@@ -31,6 +31,7 @@ def handle_client(client_socket, client_address, client_id):
             client_socket.sendall(b"JSON file updated successfully!")
 
         except json.JSONDecodeError:
+            # If the JSON format is incorrect, notify the client
             print("Failed to decode JSON from client.")
             client_socket.sendall(b"Invalid JSON format!")
 
@@ -43,9 +44,9 @@ def handle_client(client_socket, client_address, client_id):
     client_socket.close()
 
 def start_server():
-    # Create a socket object
+    # Create a socket object and server will listen on localhost and port 12345
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = ('localhost', 12345)  # Server will listen on localhost and port 12345
+    server_address = ('localhost', 12345)  
     server_socket.bind(server_address)
     server_socket.listen(5)  # Allow up to 5 connections
     print("Server is waiting for connections...")

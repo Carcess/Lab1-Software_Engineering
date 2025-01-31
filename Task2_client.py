@@ -2,9 +2,9 @@ import socket
 import json
 
 def start_client(client_id):
-    # Create a socket object
+    # Create a socket object and connect to the server on localhost and port 12345
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = ('localhost', 12345)  # Connect to the server on localhost and port 12345
+    server_address = ('localhost', 12345)
 
     try:
         # Connect to the server
