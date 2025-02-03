@@ -6,16 +6,16 @@ import json
 def handle_client(client_socket, client_address, client_id):
     print(f"Connection established with Client {client_id} at {client_address}")
 
-    # Step 1: Send a unique message to the client
+    # Send a unique message to the client
     welcome_message = f"Hi from Server to Client {client_id}"
     print(f"Send message: {welcome_message}")
     client_socket.sendall(welcome_message.encode())
 
-    # Step 2: Receive a message from the client
+    # Receive a message from the client
     client_message = client_socket.recv(1024).decode()
     print(f"Received message from Client {client_id}: {client_message}")
 
-    # Step 3: If the message is an update for the JSON file
+    # If the message is an update for the JSON file
     if client_message.startswith("{") and client_message.endswith("}"):
         try:
             # Parse the JSON update
@@ -35,7 +35,7 @@ def handle_client(client_socket, client_address, client_id):
             print("Failed to decode JSON from client.")
             client_socket.sendall(b"Invalid JSON format!")
 
-    # Step 4: Send a unique reply to the client
+    # Send a unique reply to the client
     final_message = f"Welcome Client {client_id}!"
     print(f"Send back message to Client {client_id}: {final_message}")
     client_socket.sendall(final_message.encode())
